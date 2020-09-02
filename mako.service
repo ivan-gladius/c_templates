@@ -1,0 +1,11 @@
+[Unit]
+Description=dada
+
+[Service]
+Type=forking
+ExecStart=/home/max/Desktop/SUBL/mako
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
