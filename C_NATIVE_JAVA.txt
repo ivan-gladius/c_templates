@@ -1,0 +1,9 @@
+readlink -f $(which java)
+- > path
+
+export JAVA_HOME=/your/java/installed/dir
+
+gcc -fPIC -I"$JAVA_HOME/include" -I"$JAVA_HOME/include/linux" -shared -o libhello.so HelloJNI.c
+
+
+java -Djava.library.path=. HelloJNI
